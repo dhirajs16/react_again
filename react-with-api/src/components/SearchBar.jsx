@@ -1,8 +1,15 @@
 
-function SearchBar() {
+const SearchBar = ({ onSubmit }) => {
+    const handleFormSubmit = (e) => {
+        e.preventDefault()
+        onSubmit(e.target)
+    }
+
     return (
         <>
-            <h1>SearchBar page</h1>
+            <form onSubmit={handleFormSubmit}>
+                <input type="text" />
+            </form>
         </>
     )
 }
