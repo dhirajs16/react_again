@@ -1,8 +1,8 @@
 
-function ImageShow() {
+function ImageShow({ image }) {
     return (
         <>
-            <h1>ImageShow page</h1>
+            <img width={150} height={150} src={image.urls.small} alt={image.alt_description} />
         </>
     )
 }
