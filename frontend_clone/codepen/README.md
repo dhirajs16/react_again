@@ -13,4 +13,4 @@ Currently, two official plugins are available:
 
 YT link: https://www.youtube.com/watch?v=zEyochiIF-M
 
-30:00
+60:00

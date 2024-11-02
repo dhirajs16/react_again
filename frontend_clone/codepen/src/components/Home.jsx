@@ -1,12 +1,13 @@
-import Code from './Code';
-import Header from './Header'
-
+import Code from "./Code";
+import Header from "./Header";
 
 const Home = () => {
-  return <>
-    <Header />
-    <Code />
-  </>
-}
+  return (
+    <>
+        <Header />
+        <Code />
+    </>
+  );
+};
 
 export default Home;

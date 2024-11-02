@@ -1,17 +1,9 @@
-import * as React from 'react';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar'
 
 const Header = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar className='bg-black'>
-        <img className='w-36 h-12' src='/codepenlogo.png' alt="codepen logo" />
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <div className="h-[7vh] w-screen bg-black p-3 flex items-center border-b border-gray-600">
+      <img className="w-[130px] h-[50px]" src="/codepenlogo.png" alt="" />
+    </div>
   );
 }
 

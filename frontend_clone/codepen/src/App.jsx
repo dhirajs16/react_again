@@ -1,11 +1,14 @@
-import Home from "./components/Home"
+import Home from "./components/Home";
+import DataProvider from "./context/DataProvider";
 
 const App = () => {
   return (
     <>
-      <Home />
+      <DataProvider>
+        <Home />
+      </DataProvider>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
