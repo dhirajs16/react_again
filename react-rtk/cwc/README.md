@@ -188,3 +188,25 @@ export default Counter;
 - **Dispatch Action**: Inside the `handleButtonClick` function, the `increment` action is dispatched.
 - **Reducer**: The `increment` action is handled by the reducer, updating the state.
 - **State Update**: The component re-renders with the new state, displaying the updated count.
+
+<hr>
+
+## **useSelect and useDispatch hooks**
+
+### **useSelector**
+  - `useSelector` is a function. It's used to retrieve or "select" state from the Redux store. It allows your React component to access specific pieces of state managed by Redux.
+  - Example:
+    ```javascript
+    const count = useSelector((state) => state.counter.count);
+    ```
+    Here, `count` is retrieved from the Redux store.
+
+- **useDispatch**:
+  - `useDispatch` is also a function. It returns the dispatch function, which you can use to dispatch actions to the Redux store.
+  - Dispatching an action sends a signal to the store to update the state based on the action type and any payload (data) it carries.
+  - Example:
+    ```javascript
+    const dispatch = useDispatch();
+    dispatch(increment());
+    ```
+    Here, `increment()` is an action creator, and `dispatch(increment())` sends this action to the Redux store, which the reducer then uses to update the state.
