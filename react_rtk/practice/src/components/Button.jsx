@@ -1,14 +1,14 @@
 import { useDispatch } from "react-redux";
 
-const Button = ({ action, color, work }) => {
+const Button = (props) => {
   const dispatch = useDispatch();
 
   return (
     <button
-      onClick={() => dispatch(action)}
-      className={`px-3 py-1 bg-${color}-600`}
+      onClick={() => dispatch(props.action)}
+      className={`px-3 py-1 bg-${props.color}-600`}
     >
-      {work}
+      {props.work}
     </button>
   );
 };

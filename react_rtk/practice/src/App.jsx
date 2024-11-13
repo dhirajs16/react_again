@@ -1,10 +1,11 @@
-import React from 'react'
 import Counter from './components/Counter'
+import DarkMode from './components/DarkMode'
 
 const App = () => {
   return (
     <>
       <Counter />
+      <DarkMode />
     </>
   )
 }
