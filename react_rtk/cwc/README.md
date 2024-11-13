@@ -42,17 +42,17 @@ export default counterSlice.reducer;
 
 ## **Reducers Key in RTK Slice**
 
-The reducers key in an RTK slice is an object where you define these reducer functions. Each key in this object(reducers) represents an action type(increment, decrement & reset), and the value is the reducer function that handles that action.
+The `reducers` key in an RTK slice is an object where you define these reducer functions. Each sub-key in this `reducers` object represents an action type(`increment`, `decrement` & `reset`), and the value is the reducer function that handles that action.
 
 
 ### **Reducer Function**
 
-Reducers are functions that determine how the state changes in response to an action. They take the `state` and an `action` as arguments and return the new state.
+A reducer(`increment`, `decrement` & `reset`) is a function that determine how the state changes in response to an action. They take the `state` and an `action` as arguments and return the new state.
 
 The `state` argument denotes the current state and,
 
 ### **The `action` Argument:**
-The `action` argument is an object that describes what happened and includes the information (payload) needed to update the state.
+The `action` argument is also an object that describes: what happens to state and includes the information (`payload`) needed to update the state.
 
 ### **Components of an Action:**
 1. **`type`**: A string that describes the type of action being performed. 
@@ -193,20 +193,23 @@ export default Counter;
 
 ## **useSelect and useDispatch hooks**
 
-### **useSelector**
-  - `useSelector` is a function. It's used to retrieve or "select" state from the Redux store. It allows your React component to access specific pieces of state managed by Redux.
-  - Example:
-    ```javascript
-    const count = useSelector((state) => state.counter.count);
-    ```
-    Here, `count` is retrieved from the Redux store.
+Your statement about `useSelector` from `react-redux` is correct. Here's a verification and slight elaboration:
 
-- **useDispatch**:
-  - `useDispatch` is also a function. It returns the dispatch function, which you can use to dispatch actions to the Redux store.
-  - Dispatching an action sends a signal to the store to update the state based on the action type and any payload (data) it carries.
-  - Example:
+**useSelector()**
+- `useSelector` is a function provided by the `react-redux` library. It's used to retrieve or "select" state from the Redux store, allowing React components to access specific pieces of state managed by Redux.
+- It takes a callback function as its argument. This callback function receives the entire Redux store state as its argument (`state`) and returns the piece of state that you want to access.
+- Example:
+  ```javascript
+  const count = useSelector((state) => state.counter.value);
+  ```
+  Here, `count` is retrieved from the `counter` slice of the Redux store. The function `(state) => state.counter.value` selects the `value` property from the `counter` slice of the state.
+
+**useDispatch()**
+- `useDispatch` is also a function. It returns the dispatch function, which you can use to dispatch actions to the Redux store.
+- Dispatching an action sends a signal to the store to update the state based on the action type and any payload (data) it carries.
+- Example:
     ```javascript
     const dispatch = useDispatch();
     dispatch(increment());
     ```
-    Here, `increment()` is an action creator, and `dispatch(increment())` sends this action to the Redux store, which the reducer then uses to update the state.
+Here, `increment()` is an action creator, and `dispatch(increment())` sends this action to the Redux store, which the reducer then uses to update the state.
