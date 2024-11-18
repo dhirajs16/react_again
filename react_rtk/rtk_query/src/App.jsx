@@ -1,14 +1,12 @@
-import { useStudentListQuery } from "./services/student"
+import GetAllData from "./services/components/GetAllData";
+import GetStudentById from "./services/components/GetStudentById";
 
 const App = () => {
-  const response = useStudentListQuery()
-  console.log(response.data)
-
   return (
     <>
-      <h3>App</h3>
+      <GetAllData />
+      <GetStudentById />
     </>
   )
 }
-
-export default App
+export default App;
