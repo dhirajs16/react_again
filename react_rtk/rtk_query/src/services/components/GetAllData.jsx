@@ -2,7 +2,7 @@ import { useStudentListQuery } from "../student";
 
 const GetAllData = () => {
   const { data, isLoading, isError } = useStudentListQuery();
-
+  
   return isLoading ? (
     <>Loading...</>
   ) : isError ? (
