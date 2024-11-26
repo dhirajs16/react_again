@@ -1,6 +1,6 @@
 #Motion
 
-**Lesson 1**: setup and properties like(`initial`, `animate`, `transition`, `while...`) 
+**Lesson 1**: setup and properties like(`initial`, `animate`, `transition`, `while...`), animate presence and exit prop, 
 
 
 <hr>
