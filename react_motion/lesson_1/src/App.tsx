@@ -5,7 +5,7 @@ import TextAnimation from "./components/TextAnimation";
 const App: React.FC = () => {
   return (
     <>
-      <TextAnimation />
+      {/* <TextAnimation /> */}
       <ExitProperty />
     </>
   );
