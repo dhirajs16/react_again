@@ -48,4 +48,4 @@ export default tseslint.config({
   },
 })
 ```
-42, 45:00
+42, 55:00
