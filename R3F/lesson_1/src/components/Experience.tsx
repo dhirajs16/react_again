@@ -3,6 +3,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls"; // Co
 import { extend, useFrame, useThree } from "@react-three/fiber";
 import { useRef } from "react";
 import CustomObject from "./CustomObject";
+import { PerspectiveCamera, OrthographicCamera } from "@react-three/drei";
 
 extend({ OrbitControls });
 
@@ -11,17 +12,20 @@ const Experience: React.FC = () => {
   const sphereRef = useRef<THREE.Mesh>(null); // Corrected type
   const groupRef = useRef<THREE.Group>(null); // Corrected type
   const controlsRef = useRef<OrbitControls>(null); // Use specific type if available
-  
+
   const { camera, gl } = useThree();
 
   // Uncomment if you want to apply rotation or other updates in each frame
   useFrame((state, delta) => {
-    
     if (controlsRef.current) {
       controlsRef.current.update(); // Update controls on each frame
     }
     // console.log(delta, state)
-    boxRef.current.rotation.y += delta
+    boxRef.current.rotation.y += delta;
+
+    // state.camera.lookAt(0, 0, 0)
+    // state.camera.position.x = Math.sin(state.clock.elapsedTime)*12
+    // state.camera.position.z = Math.cos(state.clock.elapsedTime)*12
   });
 
   return (
@@ -32,6 +36,17 @@ const Experience: React.FC = () => {
       {/* lighting */}
       <directionalLight intensity={2.5} position={[1, 2, 3]} />
       <ambientLight intensity={0.2} />
+
+      {/* camera */}
+      {/* we can also use OrthographicCamera i.e., also in the same in drei package */}
+      <PerspectiveCamera
+        makeDefault
+        fov={45}
+        position={[3, 0, 10]}
+        // zoom={100}
+        near={0.1}
+        far={200}
+      />
 
       {/* scene */}
       <group ref={groupRef}>
