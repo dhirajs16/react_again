@@ -23,8 +23,8 @@ const Hero = () => {
   }, []);
 
   useGSAP(() => {
-    gsap.to("#hero-title", { opacity: 1, delay: 1.5 });
-    gsap.to("#cta", {y: -100, delay: 2.5, opacity: 1})
+    gsap.to("#hero-title", { opacity: 1, delay: 2 });
+    gsap.to("#cta", {y: -50, delay: 2, opacity: 1})
   }, []);
 
   return (
