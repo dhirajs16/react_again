@@ -15,7 +15,7 @@ const Highlights = () => {
         <div className="w-full mb-12 md:flex items-end justify-between">
           {/* Highlights title */}
           <h1 id="title" className="section-heading">
-            Get the Highlights
+            Get the Highlights.
           </h1>
 
           {/* Get more links */}
